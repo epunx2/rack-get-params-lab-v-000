@@ -21,7 +21,7 @@ class Application
       end
     elsif req.path.match(/add/)
       item = req.params["get"]
-      if @@item.include(item)
+      if @@items.include(item)
         resp.write "Error!! This item is not available please add another item."
       else
         @@cart << item
