@@ -31,9 +31,6 @@ class Application
       else
         resp.write "Error!! We don't have that item."
       end
-    elsif req.path.math(/cart/)
-
-
     else
       resp.write "Path Not Found"
     end
