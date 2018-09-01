@@ -22,9 +22,9 @@ class Application
     elsif req.path.match(/add/)
       item = req.params["get"]
       if @@items.include?(item)
-        resp.write "We don't have that item"
-      else
         @@cart << item
+      else
+        resp.write "Error!! We don't have that item."
       end
     else
       resp.write "Path Not Found"
